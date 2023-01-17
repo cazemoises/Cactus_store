@@ -204,6 +204,7 @@ nav ul li a:hover, nav ul li .active {
 }
 
 .filter select {
+    background-color: #fff;
     padding: 1rem .5rem;
     border: none;
     outline: none;
