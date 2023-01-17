@@ -1,0 +1,496 @@
+body {
+    overflow-x: hidden;
+}
+.column {
+    flex-direction: column;
+}
+
+header, nav {
+    width: 100vw;
+    display: flex;
+}
+header {
+    height: 3.6rem;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header ul {
+    display: flex;
+    position: absolute;
+    right: 5vw;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: .5rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+header ul li a:hover {
+    transition: .5s;
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.topbar-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .menu-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu .menu-item button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    margin-left: 1vw;
+    outline: none;
+}
+
+.menu .menu-item button:hover span {
+    transition: .2s;
+    text-decoration: underline;
+}
+
+.menu .menu-item img {
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+form {
+    color: #555;
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 24rem;
+}
+
+form input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    width: 50vw;
+    background-color: #eee;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+}
+  
+form input[type="search"]::placeholder {
+    color: #bbb;
+}
+
+form button[type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0 0 0 .5rem;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    margin-left: .5rem;
+    opacity: 0.7;
+}
+  
+form button[type="submit"]:hover {
+    opacity: 1;
+}
+
+form button[type="submit"]:focus,
+form input[type="search"]:focus {
+  box-shadow: 0 0 3px 0 #333;
+  border-color: #000;
+  outline: none;
+}
+
+nav {
+    display: flex;
+    height: auto;
+}
+
+nav ul {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: .5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1vw;
+    height: 100%;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a:hover, nav ul li .active {
+    transition: .4s;
+    background-color: #fff;
+    color: #000;
+}
+
+.filter {
+    margin-top: 2rem;
+    display: flex;
+    width: 100vw;
+    background-color: #F2F2F2;
+    padding: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter select {
+    padding: 1rem .5rem;
+    border: none;
+    outline: none;
+    margin: .5rem 1rem;
+    width: 50vw;
+    max-width: 20rem;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.pages a {
+    text-decoration: none;
+    color: #000;
+    padding: .5rem;
+}
+
+.pages a:hover {
+    transition: .2s;
+    background-color: #000;
+    color: #fff;
+}
+
+.pages .page {
+    margin: 0 .3rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.pages .page:hover, 
+.pages .active {
+    color: #fff;
+    background-color: #000;
+}
+
+main {
+    width: 100vw;
+}
+
+main .container {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .container b {
+    padding-right: .3rem;
+}
+
+.sort {
+    padding: 2rem 3rem 0 2rem;
+}
+
+.sort select {
+    padding: 1rem 4rem 1rem .3rem;
+    text-align: left;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.sort select option:hover {
+    background-color: #000;
+    color: #fff;  
+}
+
+.products {
+    display: flex;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .product {
+    display: flex;
+    padding: 2rem;
+    margin: .5rem;
+    width: 30rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.products .product:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.products .product .img-div {
+    height: 35rem;
+}
+
+.offer .discount {
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .img-div .discount {
+    position: relative;
+    left: 0;
+    bottom: 8rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: #000;
+}
+
+.products .product .product-title {
+    font-size: 1.5rem;
+}
+
+.products .product .price {
+    font-size: 1.4rem;
+    padding-top: .5rem;
+    font-weight: 700;
+}
+
+.products .product .before-after-prices {
+    padding-top: .5rem;
+    display: flex;
+}
+
+.products .product .before-after-prices .old-price,
+.products .product .before-after-prices .new-price {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.products .product .before-after-prices .old-price {
+    text-decoration: line-through;
+    color: #707070;
+}
+
+.products .product .before-after-prices .new-price {
+    font-weight: 600;
+}
+
+.bottom-pagination {
+    padding-top: 2rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.top-pagination, .bottom-pagination {
+    padding: 2rem;
+}
+
+.top-pagination {
+    padding-left: 3rem;
+}
+
+.bottom-pagination p, .top-pagination p {
+    font-size: 1.3rem;
+}
+
+.bottom-pagination a, .top-pagination a {
+    font-size: 1.3rem;
+    margin: 0 .5rem;
+}
+
+.bottom-pagination b, .top-pagination b {
+    margin-right: .3rem;
+}
+
+footer {
+    padding: 2rem 5rem;
+    background-color: #f2f2f2;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .foo {
+    flex: 1;
+}
+
+footer .foo .foo-title {
+    text-transform: uppercase;
+    color: #707070;
+    font-size: 1.4rem;
+}
+
+footer .foo .foo-items {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+
+footer .foo .foo-items a {
+    text-decoration: none;
+    color: #000;
+    padding-top: .5rem;
+}
+
+footer .foo .foo-items a:hover {
+    text-decoration: underline;
+}
+
+footer .foo .social-media {
+    padding-top: 1rem;
+}
+
+footer .foo .social-media img {
+    width: 5rem;
+}
+
+@media only screen and (max-width:490px) {
+
+.logo img {
+    margin: 1.5rem 0 0 0;
+}
+
+.topbar-div {
+    flex-direction: column;
+    align-items: center;
+}
+
+.topbar-div form {
+    width: 100%;
+}
+
+.topbar-div form input[type=search] {
+    width: 100%;
+}
+
+.topbar-div form button[type=submit] {
+    border: 1px solid #000;
+}
+
+header ul {
+    position: inherit;
+}
+
+header {
+    height: 5rem;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu-item {
+    margin: 1rem;
+}
+
+main .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container .sort {
+    margin-top: 2rem;
+}
+
+.products {
+    justify-content: center;
+}
+
+.products .product:not(:last-of-type) {
+    border-bottom: 2px solid #000;
+}
+
+.top-pagination, .bottom-pagination {
+    justify-content: center;
+}
+
+footer {
+    flex-direction: column;
+}
+
+footer .foo {
+    padding-top: 3rem;
+}
+
+}
