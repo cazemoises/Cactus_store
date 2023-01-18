@@ -235,6 +235,7 @@ nav ul li a:hover, nav ul li .active {
 
 .filter select {
     padding: 1rem .5rem;
+    background-color: #fff;
     border: none;
     outline: none;
     margin: .5rem 1rem;
