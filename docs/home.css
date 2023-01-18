@@ -578,6 +578,10 @@ main .container {
     justify-content: center;
 }
 
+.filter button {
+    border: none;
+}
+
 footer {
     flex-direction: column;
 }
