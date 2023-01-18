@@ -224,16 +224,28 @@ nav ul li a:hover, nav ul li .active {
     width: 100vw;
     background-color: #F2F2F2;
     padding: 2rem;
-    justify-content: center;
+    align-items: flex-end;
     flex-wrap: wrap;
 }
 
 .filter .filter-selects {
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
-.filter select {
+.filter .filter-selects .filter-container label {
+    font-size: 1.3rem;    
+    font-weight: 700;
+    cursor:auto;
+    text-align: center;
+}
+
+.filter .filter-selects .filter-container label {
+    margin-top: 1rem;
+}
+
+.filter select, .filter-container button {
     padding: 1rem .5rem;
     background-color: #fff;
     border: none;
@@ -243,20 +255,21 @@ nav ul li a:hover, nav ul li .active {
     max-width: 20rem;
 }
 
-.filter button {
+.filter .close-button {
     font-size: 2.5rem;
-    width: 100%;
+    background-color: transparent;
+    width: 3rem;
     border: none;
     display: flex;
     align-items: flex-start;
+    margin-right: 3rem;
     justify-content: flex-end;
-    padding-right: 3rem;
     cursor: pointer;
 }   
 
 .filter .filter-tags {
     flex-wrap: wrap;
-    padding-left: 6vw;
+    width: 100%;
     justify-content: center;
 }
 
@@ -282,7 +295,7 @@ input, select {
     border-radius: .4rem;
 }
 
-.filter button span {
+.filter .close-button span {
     border-radius: .3rem;
     background-color: #ff0000;
     height: 2rem;

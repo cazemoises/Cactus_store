@@ -62,47 +62,41 @@
         </button>
     </div>
     <div class="filter column">
-        <button onclick="closeFilterSection()"><span>&times;</span></button>
+        <button class="close-button" onclick="closeFilterSection()"><span>&times;</span></button>
         <div class="flex filter-selects">
-            <select onchange="displayFilterTags()">
-                <option disabled selected hidden value="">Categoria</option>
-                <option>Calçados</option>
-                <option>Bolsas</option>
-                <option>Camisas</option>
-                <option>Shorts</option>
-            </select>
-            <select onchange="displayFilterTags()">
-                <option disabled selected hidden value="">Cor</option>
-                <option>Azivs</option>
-                <option>Amarelo</option>
-                <option>Vemelho</option>
-                <option>Roxo</option>
-                <option>Preto</option>
-            </select>
-            <!-- <select onchange="displayFilterTags()">
-                <option disabled selected hidden value="">Faixa de preço</option>
-            </select> -->
-            <select onchange="displayFilterTags()">
-                <option disabled selected hidden value="">Marca</option>
-                <option>Calçados</option>
-                <option>Bolsas</option>
-                <option>Camisas</option>
-                <option>Shorts</option>
-            </select>
-            <select onchange="displayFilterTags()">
-                <option disabled selected hidden value="">Tamanho</option>
-                <option>PP</option>
-                <option>P</option>
-                <option>M</option>
-                <option>G</option>
-                <option>GG</option>
-            </select>
+            <div class="filter-container flex column">
+                <label for="">Categoria</label>
+                <select id="cathegory" onchange="displayFilterTags(this.id)">
+                    <option disabled selected hidden value="">Selecionar</option>
+                    <option>Calçados</option>
+                    <option>Bolsas</option>
+                    <option>Camisas</option>
+                    <option>Shorts</option>
+                </select>
+            </div>
+            <div class="filter-container flex column">
+                <label for="">Cor</label>
+                <select id="color" onchange="displayFilterTags(this.id)">
+                    <option disabled selected hidden value="">Selecionar</option>
+                    <option>Azul</option>
+                    <option>Vermelho</option>
+                    <option>Amarelo</option>
+                    <option>Preto</option>
+                    <option>Branco</option>
+                </select>
+            </div>
+            <div class="filter-container flex column">
+                <label for="">Faixa de preço</label>
+                <select id="price" onchange="displayFilterTags(this.id)">
+                    <option disabled selected hidden value="">Selecionar</option>
+                    <option>Até R$ 19,90</option>
+                    <option>Até R$ 49,90</option>
+                    <option>Até R$ 99,90</option>
+                    <option>Até R$ 149,90</option>
+                </select>
+            </div>
         </div>
         <div class="filter-tags flex">
-            <button class="flex">
-                <p>Vermelho</p>
-                <span>&times;</span>
-            </button>
         </div>
     </div>
     <main>
@@ -122,7 +116,7 @@
             
             <div class="sort">
                 <select>
-                    <option>Novidades</option>
+                    <option selected disabled hidden>Ordenar por...</option>
                     <option>Mais vistos</option>
                     <option>Maior preço</option>
                     <option>Menor preço</option>

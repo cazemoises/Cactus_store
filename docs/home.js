@@ -1,4 +1,4 @@
-const displayFilterTags = () => {
+const displayFilterTags = (selectCathegory) => {
     
     const filter = document.querySelector('.filter-tags');
     const selectedTags = document.querySelectorAll('.filter select option:checked');
@@ -9,7 +9,7 @@ const displayFilterTags = () => {
 
         if (item.value) {
             filter.innerHTML += `            
-            <button id=${item.value} onclick="deleteFilterTag(this.id)" class="flex">
+            <button id=${item.value} onclick="deleteFilterTag(this.id, ${selectCathegory})" class="flex">
                 <p>${item.value}</p>
                 <span>&times;</span>
             </button>`
@@ -20,15 +20,11 @@ const displayFilterTags = () => {
     
 }
 
-const deleteFilterTag = (id) => {
+const deleteFilterTag = (id, select) => {
 
     const tag = document.querySelector(`#${id}`);
-    const selectedTags = document.querySelectorAll('.filter select option:checked');
 
-    selectedTags.forEach((item) => {
-        console.log(item.value)
-    })
-
+    select.selectedIndex = 0
     return tag.remove();
 
 }
@@ -48,5 +44,11 @@ const closeFilterSection = () => {
     const closedFilter = document.querySelector('.closed-filter');
     filterDiv.style.display = 'none';
     closedFilter.style.display = 'flex'
+
+}
+
+const filterPrice = () => {
+
+    const filterSlider = document.querySelector('')
 
 }
