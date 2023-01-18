@@ -5,14 +5,16 @@ body {
     flex-direction: column;
 }
 
+.flex {
+    display: flex;
+}
+
 header, nav {
     width: 100vw;
-    display: flex;
 }
 header {
     height: 3.6rem;
     border-bottom: 2px solid #ccc;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -25,14 +27,13 @@ header p {
 }
 
 header ul {
-    display: flex;
     position: absolute;
     right: 5vw;
 }
 
 header ul li {
     list-style: none;
-    margin-left: .5rem;
+    margin-left: 1rem;
 }
 
 header ul li a {
@@ -48,7 +49,6 @@ header ul li a:hover {
 }
 
 .logo {
-    display: flex;
     align-items: center;
 }
 
@@ -58,26 +58,22 @@ header ul li a:hover {
 }
 
 .topbar-div {
-    display: flex;
     justify-content: space-evenly;
 }
 
 .menu {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .menu .menu-item {
     flex: 1;
-    display: flex;
     justify-content: center;
 
 }
 
 .menu .menu-item button {
     cursor: pointer;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -193,9 +189,38 @@ nav ul li a:hover, nav ul li .active {
     color: #000;
 }
 
+.closed-filter {
+    display: flex;
+    margin-top: 2rem;
+    padding: 2rem 3rem 2rem 3rem;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+.closed-filter button {
+    cursor: pointer;
+    align-items: center;
+    color: #fff;
+    height: 4rem;
+    background-color: #F2F2F2;
+    border: none;
+    padding: 1rem 2rem 1rem 1rem;
+    outline: none;
+    background-color: #000;
+}
+
+.closed-filter button p {
+    text-align: center;
+}
+
+.closed-filter button img {
+    height: 4rem;
+    background-color: #000;
+}
+
 .filter {
     margin-top: 2rem;
-    display: flex;
+    display: none;
     width: 100vw;
     background-color: #F2F2F2;
     padding: 2rem;
@@ -203,14 +228,68 @@ nav ul li a:hover, nav ul li .active {
     flex-wrap: wrap;
 }
 
+.filter .filter-selects {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .filter select {
-    background-color: #fff;
     padding: 1rem .5rem;
     border: none;
     outline: none;
     margin: .5rem 1rem;
     width: 50vw;
     max-width: 20rem;
+}
+
+.filter button {
+    font-size: 2.5rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    cursor: pointer;
+}   
+
+.filter .filter-tags {
+    flex-wrap: wrap;
+    padding-left: 6vw;
+    justify-content: center;
+}
+
+.filter .filter-tags button {
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 1rem .5rem 0 0;
+    align-items: center;
+    justify-content: center;
+    padding: .1rem .3rem .1rem .8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: auto;
+}
+
+.filter .filter-tags span {
+    background-color: transparent;
+    font-size: 1.6rem;
+}
+
+input, select {
+    border-radius: .4rem;
+}
+
+.filter button span {
+    border-radius: .3rem;
+    background-color: #ff0000;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 2rem;
 }
 
 .pages {
@@ -285,7 +364,6 @@ main .container b {
     padding-top: 3rem;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
 }
 
 .products .product {
