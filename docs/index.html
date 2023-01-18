@@ -64,6 +64,7 @@
     <div class="filter column">
         <button class="close-button" onclick="closeFilterSection()"><span>&times;</span></button>
         <div class="flex filter-selects">
+            
             <div class="filter-container flex column">
                 <label for="">Categoria</label>
                 <select id="cathegory" onchange="displayFilterTags(this.id)">
@@ -74,9 +75,10 @@
                     <option>Shorts</option>
                 </select>
             </div>
+
             <div class="filter-container flex column">
                 <label for="">Cor</label>
-                <select id="color" onchange="displayFilterTags(this.id)">
+                <select onchange="displayFilterTags(this.id)">
                     <option disabled selected hidden value="">Selecionar</option>
                     <option>Azul</option>
                     <option>Vermelho</option>
@@ -85,6 +87,7 @@
                     <option>Branco</option>
                 </select>
             </div>
+
             <div class="filter-container flex column">
                 <label for="">Faixa de preço</label>
                 <select id="price" onchange="displayFilterTags(this.id)">
@@ -95,6 +98,7 @@
                     <option>Até R$ 149,90</option>
                 </select>
             </div>
+
         </div>
         <div class="filter-tags flex">
         </div>
